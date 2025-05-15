@@ -5,17 +5,15 @@ import (
 	"go/token"
 	"strconv"
 
-	"github.com/Deiz/tracegen"
 	"github.com/dave/dst"
 	"github.com/dave/dst/decorator"
 	"github.com/dave/dst/decorator/resolver"
+	"github.com/paulhodson/tracegen"
 )
 
-var (
-	hints = map[string]string{
-		"github.com/opentracing/opentracing-go": "opentracing",
-	}
-)
+var hints = map[string]string{
+	"github.com/opentracing/opentracing-go": "opentracing",
+}
 
 func getResolver(pkg *decorator.Package, file *dst.File) resolver.RestorerResolver {
 	return tracegen.NewSimpleResolver(pkg, file, hints)

@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/Deiz/tracegen"
+	"github.com/paulhodson/tracegen"
 )
 
 func main() {

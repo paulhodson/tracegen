@@ -28,13 +28,13 @@ func Foo(ctx context.Context) {
 ### CLI
 
 ```sh
-go install github.com/Deiz/tracegen/cmd/...@latest
+go install github.com/paulhodson/tracegen/cmd/...@latest
 ```
 
 ### Library
 
 ```sh
-go get github.com/Deiz/tracegen
+go get github.com/paulhodson/tracegen
 ```
 
 ## Usage

@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Deiz/tracegen"
+	"github.com/paulhodson/tracegen"
 )
 
 const gomod = `module test
@@ -35,8 +35,10 @@ func Foo(ctx context.Context) {
 }
 `
 
-const input1 = output0
-const output1 = input0
+const (
+	input1  = output0
+	output1 = input0
+)
 
 const input2 = `package main
 
@@ -76,10 +78,10 @@ func writeModule(t *testing.T, sample string) (path string) {
 	check(t, err)
 
 	path = filepath.Join(dir, "sample.go")
-	err = os.WriteFile(path, []byte(sample), 0644)
+	err = os.WriteFile(path, []byte(sample), 0o644)
 	check(t, err)
 
-	err = os.WriteFile(filepath.Join(dir, "go.mod"), []byte(gomod), 0644)
+	err = os.WriteFile(filepath.Join(dir, "go.mod"), []byte(gomod), 0o644)
 	check(t, err)
 
 	return path

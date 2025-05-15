@@ -1,4 +1,4 @@
-module github.com/Deiz/tracegen
+module github.com/paulhodson/tracegen
 
 go 1.24
 
